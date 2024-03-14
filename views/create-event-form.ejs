@@ -1,0 +1,29 @@
+<!-- create-event-form.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Eventle</title>
+    <% include utils/styles %> <!-- Include CSS links -->
+</head>
+<body>
+    <% include utils/adminHeader %> <!-- Include admin header -->
+    <form method="POST">
+        <div class="w3-container"> 
+            <div class="content">
+                <div class="container">
+                    <div class="col-md-6 col-md-offset-3">
+                        <label>Event ID:</label><br>
+                        <input type="number" name="event_id" required class="form-control"><br><br>
+                        <!-- Include other input fields here -->
+                        <button type="submit" name="update" class="btn btn-default pull-right">Create Event <span class="glyphicon glyphicon-send"></span></button>
+                        <a class="btn btn-default navbar-btn" href="adminPage"><span class="glyphicon glyphicon-circle-arrow-left"></span> Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <% include utils/footer %> <!-- Include footer -->
+</body>
+</html>

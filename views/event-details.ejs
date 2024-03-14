@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Eventle</title>
+</head>
+
+<body>
+    <% include partials/adminHeader %> <!-- Include admin header -->
+    
+    <div class="content">
+        <div class="container">
+            <h1>Event details</h1>
+            <% if (events.length > 0) { %>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>No. of Participants</th>
+                        <th>Price</th>
+                        <th>Student Coordinator</th>
+                        <th>Staff Coordinator</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% events.forEach(event => { %>
+                    <tr>
+                        <td><%= event.event_title %></td>
+                        <td><%= event.participents %></td>
+                        <td><%= event.event_price %></td>
+                        <td><%= event.student_coordinator %></td>
+                        <td><%= event.staff_coordinator %></td>
+                        <td><%= event.Date %></td>
+                        <td><%= event.time %></td>
+                        <td><%= event.location %></td>
+                        <td>
+                            <a class="delete" href="deleteEvent/<%= event.event_id %>">Delete</a>
+
+                        </td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            <% } else { %>
+            <p>No events found</p>
+            <% } %>
+            <a class="btn btn-default" href="createEventForm">Create Event</a>
+        </div>
+    </div>
+    
+</body>
+
+</html>

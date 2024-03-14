@@ -1,0 +1,46 @@
+<!-- contact-us.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Eventle</title>
+    <% include utils/styles %> <!-- Include CSS links -->
+</head>
+<body>
+    <% include utils/header %> <!-- Include header -->
+    <div class="content">
+        <div class="container">
+            <div class="col-md-12">
+                <h1 style="color:#003300; font-size:38px;"><strong>Contact Us</strong></h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-6 contacts">
+                <h1 style="color:#000080; font-size:42px; font-style:bold">
+                    <span class="glyphicon glyphicon-user"></span> Event
+                </h1>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span> Email: <%= eventEmail %><br>
+                    <span class="glyphicon glyphicon-phone"></span> Mobile: <%= eventMobile %>
+                </p>
+            </div>
+            <div class="col-md-6 contacts">
+                <h1 style="color:#000080; font-size:42px; font-style:bold">
+                    <span class="glyphicon glyphicon-user"></span> Example
+                </h1>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span> Email: <%= exampleEmail %><br>
+                    <span class="glyphicon glyphicon-phone"></span> Mobile: <%= exampleMobile %>
+                </p>
+            </div>
+        </div>
+    </div>
+    <% include utils/footer %> <!-- Include footer -->
+</body>
+</html>
